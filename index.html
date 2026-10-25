@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dan Derrick | Official Website</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #101010;
+      color: #f5f0e7;
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+    header, section, footer {
+      padding: 28px 8%;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #3c3020;
+    }
+    .logo, h1, h2 { color: #d9ad62; }
+    nav a {
+      color: #f5f0e7;
+      text-decoration: none;
+      margin-left: 16px;
+    }
+    .hero {
+      min-height: 65vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    h1 { font-size: clamp(2.5rem, 7vw, 5rem); }
+    .gold { color: #d9ad62; }
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      margin-top: 14px;
+      background: #d9ad62;
+      color: #101010;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .panel {
+      border: 1px solid #51432d;
+      padding: 22px;
+      border-radius: 8px;
+      max-width: 700px;
+    }
+    footer {
+      border-top: 1px solid #3c3020;
+      color: #c4bba9;
+    }
+    a { overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <header>
+    <strong class="logo">DD.</strong>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <p class="gold">WELCOME TO MY WEBSITE</p>
+    <h1>DAN DERRICK</h1>
+    <p>Dream. Plan. Achieve.</p>
+    <p>A professional introduction to who I am
+       and what I do.</p>
+    <a class="button" href="#contact">Get in touch</a>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="panel">
+      <p>Welcome! I'm Dan Derrick. This is my official
+         website, where you can learn more about me,
+         my work and how to contact me.</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>What I Do</h2>
+    <div class="panel">
+      <p>Details about my services and expertise
+         will be added here.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Let's Connect</h2>
+    <p>Email me to make an enquiry.</p>
+    <a class="button"
+       href="mailto:derrickcoach078@gmail.com">
+       Send an Email
+    </a>
+    <p>derrickcoach078@gmail.com</p>
+  </section>
+
+  <footer>
+    © 2026 Dan Derrick. All rights reserved.
+  </footer>
+</body>
+</html>
