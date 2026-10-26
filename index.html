@@ -2,559 +2,487 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101010">
-  <meta name="description" content="Swimming lessons for children and adults, lifeguarding and pool maintenance by Dan Derrick in Kenya. Contact us for a quote.">
-  <title>Dan Derrick | Swimming & Aquatic Services</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dan Derrick | Swimming & Pool Services</title>
+<meta name="description" content="Swimming lessons, lifeguarding and pool maintenance in Kenya.">
 
-  <style>
-    :root {
-      --black: #101010;
-      --panel: #191919;
-      --gold: #d9ad62;
-      --white: #f5f0e7;
-      --muted: #c4bba9;
-      --border: #493b27;
-    }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      background: var(--black);
-      color: var(--white);
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
-    }
-
-    a { overflow-wrap: anywhere; }
-
-    a:focus-visible, input:focus-visible,
-    select:focus-visible, textarea:focus-visible,
-    button:focus-visible {
-      outline: 2px solid var(--gold);
-      outline-offset: 4px;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 20px 8%;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .logo {
-      color: var(--gold);
-      font-size: 1.8rem;
-      font-weight: 800;
-      text-decoration: none;
-      letter-spacing: 2px;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-
-    nav a {
-      color: var(--white);
-      font-size: .94rem;
-      text-decoration: none;
-    }
-
-    nav a:hover { color: var(--gold); }
-
-    section { padding: 72px 8%; }
-
-    .hero {
-      min-height: 78vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      background:
-        linear-gradient(90deg, rgba(16,16,16,.97), rgba(16,16,16,.65)),
-        url("https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1800&q=85")
-        center/cover no-repeat;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      font-size: .85rem;
-      font-weight: bold;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
-
-    h1, h2, h3 { line-height: 1.2; }
-
-    h1 {
-      margin: 12px 0;
-      color: var(--gold);
-      font-size: clamp(2.7rem, 8vw, 5.4rem);
-      letter-spacing: 1px;
-    }
-
-    h2 {
-      margin-top: 0;
-      color: var(--gold);
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-    }
-
-    h3 { color: var(--gold); }
-
-    .headline {
-      max-width: 720px;
-      margin: 0;
-      font-size: clamp(1.4rem, 4vw, 2.3rem);
-      font-weight: bold;
-    }
-
-    .intro {
-      max-width: 650px;
-      color: var(--muted);
-      font-size: 1.08rem;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 21px;
-      border: 1px solid var(--gold);
-      border-radius: 5px;
-      background: var(--gold);
-      color: var(--black);
-      text-decoration: none;
-      font-weight: bold;
-      cursor: pointer;
-      font: inherit;
-      font-weight: bold;
-    }
-
-    .button:hover { filter: brightness(1.08); }
-
-    .button.secondary {
-      background: transparent;
-      color: var(--gold);
-    }
-
-    .section-intro {
-      max-width: 720px;
-      margin-top: -5px;
-      margin-bottom: 30px;
-      color: var(--muted);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .card, .panel {
-      padding: 24px;
-      border: 1px solid var(--border);
-      border-radius: 9px;
-      background: var(--panel);
-    }
-
-    .card p, .panel p { color: var(--muted); }
-
-    .service-icon {
-      font-size: 2rem;
-    }
-
-    .about-layout {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 30px;
-      align-items: start;
-    }
-
-    .skills {
-      padding-left: 20px;
-      color: var(--muted);
-    }
-
-    .skills li { margin-bottom: 8px; }
-
-    .experience-item {
-      padding: 18px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .experience-item:last-child { border-bottom: 0; }
-
-    .experience-item h3 { margin-bottom: 5px; }
-
-    .date {
-      color: var(--gold);
-      font-size: .9rem;
-    }
-
-    .contact-layout {
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 30px;
-      align-items: start;
-    }
-
-    .contact-link {
-      display: block;
-      margin: 14px 0;
-      color: var(--white);
-      text-decoration: none;
-    }
-
-    .contact-link:hover { color: var(--gold); }
-
-    form { display: grid; gap: 16px; }
-
-    label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: bold;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #5a4a33;
-      border-radius: 5px;
-      background: #101010;
-      color: var(--white);
-      font: inherit;
-    }
-
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    .form-note {
-      color: var(--muted);
-      font-size: .88rem;
-    }
-
-    footer {
-      padding: 28px 8%;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      text-align: center;
-    }
-
-    footer a { color: var(--gold); }
-
-    @media (max-width: 760px) {
-      header {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      nav { gap: 12px; }
-
-      section { padding: 52px 6%; }
-
-      .hero { min-height: 70vh; }
-
-      .grid, .about-layout, .contact-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .card, .panel { padding: 20px; }
-    }
-  </style>
+<style>
+:root {
+  --bg: #090909;
+  --panel: #151515;
+  --gold: #d4af37;
+  --cream: #f5f0e4;
+  --muted: #c6c0b2;
+}
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--cream);
+  font: 16px/1.6 Arial, sans-serif;
+}
+header {
+  position: sticky;
+  top: 0;
+  background: #090909f2;
+  border-bottom: 1px solid #4e401c;
+  z-index: 3;
+}
+nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.brand, h2, h3 {
+  font-family: Georgia, serif;
+}
+.brand {
+  color: var(--gold);
+  letter-spacing: 3px;
+  font-size: 1.3rem;
+}
+nav a {
+  color: var(--cream);
+  text-decoration: none;
+  margin-right: 12px;
+}
+nav a:hover, a {
+  color: var(--gold);
+}
+.hero {
+  text-align: center;
+  padding: 95px 20px;
+  background:
+    linear-gradient(#000b,#000b),
+    url('https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1800&q=85')
+    center/cover;
+}
+.hero > div {
+  max-width: 850px;
+  margin: auto;
+}
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+h1 {
+  font: clamp(2.5rem,6vw,4.5rem)/1.1 Georgia,serif;
+  margin: 15px 0;
+}
+h2 {
+  font-size: clamp(1.8rem,4vw,2.6rem);
+  color: var(--gold);
+  margin: 0 0 18px;
+}
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 65px 22px;
+}
+.intro {
+  max-width: 760px;
+  color: var(--muted);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid #4e401c;
+  padding: 23px;
+  border-radius: 8px;
+}
+.card h3 {
+  color: var(--gold);
+  margin-top: 0;
+}
+.price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--gold);
+  margin: 10px 0;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: var(--gold);
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+  margin: 5px 5px 5px 0;
+  border: 1px solid var(--gold);
+  cursor: pointer;
+  font-size: 14px;
+}
+.outline {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+}
+.featured {
+  border-color: var(--gold);
+}
+.tag {
+  display: inline-block;
+  background: var(--gold);
+  color: #111;
+  padding: 2px 8px;
+  font-size: .75rem;
+}
+.timeline {
+  border-left: 2px solid var(--gold);
+  padding-left: 20px;
+  margin: 24px 0;
+}
+.job {
+  margin-bottom: 24px;
+}
+.job h3 {
+  margin: 0;
+}
+.date {
+  color: var(--gold);
+}
+.contact {
+  background: #111;
+  border-top: 1px solid #4e401c;
+}
+.booking-form {
+  max-width: 760px;
+  margin: 28px 0;
+  padding: 24px;
+  background: #151515;
+  border: 1px solid #4e401c;
+  border-radius: 8px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 16px;
+}
+.booking-form label {
+  display: block;
+  color: var(--cream);
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 12px;
+  background: #090909;
+  color: var(--cream);
+  border: 1px solid #655323;
+  border-radius: 4px;
+  font: inherit;
+}
+.booking-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+.form-field {
+  margin-bottom: 16px;
+}
+.form-note {
+  color: var(--muted);
+  font-size: .9rem;
+}
+#packageField {
+  display: none;
+}
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 24px;
+  border-top: 1px solid #302714;
+}
+@media(max-width:600px) {
+  section { padding: 48px 18px; }
+  .hero { padding: 70px 18px; }
+  .booking-form { padding: 17px; }
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <a class="logo" href="#home" aria-label="Dan Derrick home">DD.</a>
 
-    <nav aria-label="Main navigation">
-      <a href="#home">Home</a>
+<header>
+  <nav>
+    <div class="brand">DAN DERRICK</div>
+    <div>
       <a href="#about">About</a>
       <a href="#services">Services</a>
+      <a href="#packages">Packages</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 
-  <main>
-    <section class="hero" id="home">
-      <p class="eyebrow">Swimming · Aquatic Safety · Pool Care</p>
-      <h1>DAN DERRICK</h1>
-      <p class="headline">Building Confidence in Every Stroke.</p>
-      <p class="intro">
-        Professional swimming instruction for children and adults,
-        lifeguarding and pool maintenance services in Kenya.
-        Let's make your swimming experience safer and more enjoyable.
-      </p>
+<main>
 
-      <div class="buttons">
-        <a class="button" href="#contact">Request a Quote</a>
-        <a class="button secondary"
-           href="https://wa.me/254798828956"
-           target="_blank" rel="noopener noreferrer">
-          Chat on WhatsApp
-        </a>
+<div class="hero">
+  <div>
+    <div class="eyebrow">Swimming • Safety • Pool Care</div>
+    <h1>Building Confidence in Every Stroke</h1>
+    <p>Swimming lessons for children and adults, lifeguarding, and pool maintenance services in Kenya.</p>
+    <a class="btn" href="#packages">View Packages</a>
+    <a class="btn outline" href="#contact">Contact Dan</a>
+  </div>
+</div>
+
+<section id="about">
+  <div class="eyebrow">About</div>
+  <h2>Meet Dan Derrick</h2>
+  <p class="intro">
+    Dan Derrick provides swimming instruction and aquatic support focused on confidence, technique, safety, and reliable pool care. Contact him to discuss your needs.
+  </p>
+</section>
+
+<section id="services">
+  <div class="eyebrow">What I offer</div>
+  <h2>Services</h2>
+
+  <div class="grid">
+    <article class="card">
+      <h3>Swimming Lessons</h3>
+      <p>Lessons for children and adults, suited to each learner's experience and goals.</p>
+    </article>
+
+    <article class="card">
+      <h3>Lifeguarding</h3>
+      <p>Lifeguarding support for aquatic facilities and events. Contact Dan to discuss availability.</p>
+    </article>
+
+    <article class="card">
+      <h3>Pool Maintenance</h3>
+      <p>Pool care and maintenance support to help keep swimming facilities clean and ready for use.</p>
+    </article>
+  </div>
+</section>
+
+<section id="packages">
+  <div class="eyebrow">Swimming lessons</div>
+  <h2>Lesson Packages</h2>
+  <p class="intro">Choose the package that suits your goals. All prices are in Kenyan shillings (KES).</p>
+
+  <div class="grid">
+    <article class="card">
+      <h3>Single Session</h3>
+      <div class="price">KES 1,500</div>
+      <p>One swimming lesson.</p>
+      <a class="btn outline" href="#contact">Enquire</a>
+    </article>
+
+    <article class="card">
+      <h3>12 Sessions</h3>
+      <div class="price">KES 10,000</div>
+      <p>Twelve swimming lessons.</p>
+      <a class="btn outline" href="#contact">Enquire</a>
+    </article>
+
+    <article class="card featured">
+      <span class="tag">Popular package</span>
+      <h3>20 Sessions</h3>
+      <div class="price">KES 16,000</div>
+      <p>Twenty swimming lessons.</p>
+      <a class="btn" href="#contact">Enquire</a>
+    </article>
+
+    <article class="card">
+      <h3>One Month Unlimited</h3>
+      <div class="price">KES 20,000</div>
+      <p>Unlimited swimming lessons for one month.</p>
+      <a class="btn outline" href="#contact">Enquire</a>
+    </article>
+  </div>
+
+  <p class="intro">
+    Please contact Dan to confirm scheduling, availability, and package terms before payment.
+  </p>
+</section>
+
+<section id="experience">
+  <div class="eyebrow">Professional background</div>
+  <h2>Work Experience</h2>
+
+  <div class="timeline">
+    <div class="job">
+      <h3>Lake Naivasha Resort</h3>
+      <div class="date">Current employment</div>
+    </div>
+
+    <div class="job">
+      <h3>Water Park Supervisor &amp; Lifeguard — Oceans City Water Park</h3>
+      <div class="date">July 2025 – 3 July 2026</div>
+    </div>
+
+    <div class="job">
+      <h3>Lifeguard — Surfcrest Technology Training Institute</h3>
+      <div class="date">February 2024 – April 2025</div>
+    </div>
+
+    <div class="job">
+      <h3>Lifeguard — Barizi Resort &amp; Garden, Rongai</h3>
+      <div class="date">January 2023 – February 2024</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="eyebrow">Let's connect</div>
+  <h2>Contact Dan</h2>
+  <p>Ask about swimming lessons, lesson packages, lifeguarding, or pool maintenance.</p>
+
+  <form class="booking-form" id="enquiryForm"
+        action="https://formsubmit.co/derrickcoach078@gmail.com"
+        method="POST">
+
+    <input type="hidden" name="_subject" value="New enquiry from Dan Derrick website">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+
+    <div class="form-grid">
+      <div class="form-field">
+        <label for="fullName">Full name *</label>
+        <input id="fullName" name="Full name" required autocomplete="name">
       </div>
-    </section>
 
-    <section id="about">
-      <p class="eyebrow">Get to know Dan</p>
-      <h2>About Me</h2>
-
-      <div class="about-layout">
-        <div>
-          <p>
-            I'm Dan Derrick, an aquatic safety professional with experience
-            in lifeguarding, swimming instruction, pool supervision and
-            pool maintenance.
-          </p>
-          <p>
-            My professional experience in water-park, swimming-pool and
-            resort environments has helped me develop practical skills in
-            water safety, emergency response, instruction and pool care.
-          </p>
-          <p>
-            My goal is to help children and adults build confidence in the
-            water while supporting safe swimming practices and well-cared-for
-            pool facilities.
-          </p>
-        </div>
-
-        <div class="panel">
-          <h3>My Approach</h3>
-          <ul class="skills">
-            <li>Safety-conscious swimming instruction</li>
-            <li>Respectful, clear communication</li>
-            <li>Responsible pool supervision</li>
-            <li>Care and attention to pool cleanliness</li>
-            <li>Services discussed around each client's needs</li>
-          </ul>
-        </div>
+      <div class="form-field">
+        <label for="phone">Phone / WhatsApp *</label>
+        <input id="phone" name="Phone / WhatsApp" required autocomplete="tel">
       </div>
-    </section>
 
-    <section id="services">
-      <p class="eyebrow">How I can help</p>
-      <h2>My Services</h2>
-      <p class="section-intro">
-        Whether you're looking for swimming lessons or support with pool
-        safety and care, get in touch to discuss your requirements and
-        request a quote.
-      </p>
-
-      <div class="grid">
-        <article class="card">
-          <div class="service-icon" aria-hidden="true">🏊</div>
-          <h3>Swimming Lessons</h3>
-          <p>
-            Swimming instruction for children and adults, with lessons
-            adapted to the learner's current ability and confidence in
-            the water.
-          </p>
-          <a class="button secondary" href="#contact">Enquire</a>
-        </article>
-
-        <article class="card">
-          <div class="service-icon" aria-hidden="true">🛟</div>
-          <h3>Lifeguarding</h3>
-          <p>
-            Lifeguarding and aquatic supervision enquiries for suitable
-            pools, facilities and events, based on the client's needs
-            and the service arrangements.
-          </p>
-          <a class="button secondary" href="#contact">Enquire</a>
-        </article>
-
-        <article class="card">
-          <div class="service-icon" aria-hidden="true">💧</div>
-          <h3>Pool Maintenance</h3>
-          <p>
-            Pool cleaning and general pool-care enquiries to help keep
-            swimming facilities clean, cared for and welcoming.
-          </p>
-          <a class="button secondary" href="#contact">Enquire</a>
-        </article>
+      <div class="form-field">
+        <label for="email">Email address</label>
+        <input id="email" type="email" name="Email address" autocomplete="email">
       </div>
-    </section>
 
-    <section id="experience">
-      <p class="eyebrow">Professional background</p>
-      <h2>Experience & Training</h2>
-      <p class="section-intro">
-        Practical experience across aquatic safety, lifeguarding and
-        water-park operations.
-      </p>
-
-      <div class="panel">
-        <div class="experience-item">
-          <h3>Water Park Supervisor & Lifeguard</h3>
-          <p>Oceans City Water Park</p>
-          <span class="date">July 2025 – Present (as listed on CV)</span>
-        </div>
-
-        <div class="experience-item">
-          <h3>Lifeguard</h3>
-          <p>Surfcrest Technology Training Institute</p>
-          <span class="date">February 2024 – April 2025</span>
-        </div>
-
-        <div class="experience-item">
-          <h3>Lifeguard</h3>
-          <p>Barizi Resort & Garden, Rongai</p>
-          <span class="date">January 2023 – February 2024</span>
-        </div>
-
-        <div class="experience-item">
-          <h3>Relevant Skills</h3>
-          <p>
-            Water safety and supervision, swimming instruction, first aid
-            and CPR training, emergency response, pool cleanliness,
-            communication and team coordination.
-          </p>
-        </div>
+      <div class="form-field">
+        <label for="service">Service needed *</label>
+        <select id="service" name="Service requested" required>
+          <option value="">Choose a service</option>
+          <option>Swimming lessons</option>
+          <option>Lifeguarding</option>
+          <option>Pool maintenance</option>
+        </select>
       </div>
-    </section>
 
-    <section id="contact">
-      <p class="eyebrow">Let's connect</p>
-      <h2>Request a Quote</h2>
-      <p class="section-intro">
-        Tell me what service you need and where you are located in Kenya.
-        I'll use the details to understand your enquiry and discuss the
-        next steps with you.
-      </p>
-
-      <div class="contact-layout">
-        <div class="panel">
-          <h3>Contact Dan</h3>
-          <p>Prefer to contact me directly? Use email or WhatsApp.</p>
-
-          <a class="contact-link"
-             href="mailto:derrickcoach078@gmail.com">
-            ✉ derrickcoach078@gmail.com
-          </a>
-
-          <a class="contact-link"
-             href="https://wa.me/254798828956"
-             target="_blank" rel="noopener noreferrer">
-            ☎ WhatsApp: +254 798 828 956
-          </a>
-
-          <p class="form-note">Service area: Kenya</p>
-        </div>
-
-        <div class="panel">
-          <form id="quoteForm">
-            <div>
-              <label for="name">Full name *</label>
-              <input id="name" name="name" autocomplete="name"
-                     required maxlength="100">
-            </div>
-
-            <div>
-              <label for="email">Email address *</label>
-              <input id="email" name="email" type="email"
-                     autocomplete="email" required maxlength="150">
-            </div>
-
-            <div>
-              <label for="phone">Phone number</label>
-              <input id="phone" name="phone" type="tel"
-                     autocomplete="tel" maxlength="40">
-            </div>
-
-            <div>
-              <label for="service">Service required *</label>
-              <select id="service" name="service" required>
-                <option value="">Choose a service</option>
-                <option>Swimming lessons for children</option>
-                <option>Swimming lessons for adults</option>
-                <option>Lifeguarding</option>
-                <option>Pool maintenance</option>
-                <option>More than one service</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="location">Location in Kenya *</label>
-              <input id="location" name="location"
-                     placeholder="Town or county" required maxlength="100">
-            </div>
-
-            <div>
-              <label for="details">Tell me more about your needs *</label>
-              <textarea id="details" name="details"
-                placeholder="Preferred dates, number of learners, pool details or other requirements..."
-                required maxlength="2000"></textarea>
-            </div>
-
-            <button class="button" type="submit">Send Quote Enquiry</button>
-
-            <p class="form-note">
-              Submitting opens WhatsApp with your enquiry prepared.
-              Review and send the message in WhatsApp to complete your request.
-            </p>
-          </form>
-        </div>
+      <div class="form-field" id="packageField">
+        <label for="package">Swimming lesson package</label>
+        <select id="package" name="Swimming package">
+          <option value="">Choose a package (if applicable)</option>
+          <option>1 session — KES 1,500</option>
+          <option>12 sessions — KES 10,000</option>
+          <option>20 sessions — KES 16,000</option>
+          <option>1 month unlimited — KES 20,000</option>
+        </select>
       </div>
-    </section>
-  </main>
 
-  <footer>
-    <p><strong class="logo">DD.</strong></p>
-    <p>Building Confidence in Every Stroke.</p>
-    <p>Swimming Lessons · Lifeguarding · Pool Maintenance</p>
-    <p>
-      <a href="mailto:derrickcoach078@gmail.com">Email Dan</a>
-      &nbsp;|&nbsp;
-      <a href="https://wa.me/254798828956"
-         target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <div class="form-field">
+        <label for="learner">Learner type (if applicable)</label>
+        <select id="learner" name="Learner type">
+          <option value="">Choose if applicable</option>
+          <option>Child</option>
+          <option>Adult</option>
+          <option>Group</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="date">Preferred date</label>
+        <input id="date" type="date" name="Preferred date">
+      </div>
+
+      <div class="form-field">
+        <label for="location">Location</label>
+        <input id="location" name="Location" placeholder="e.g. Nairobi">
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="details">Additional details</label>
+      <textarea id="details" name="Additional details" placeholder="Tell Dan what you need or ask a question."></textarea>
+    </div>
+
+    <p class="form-note">
+      Email enquiries use FormSubmit. On the first enquiry, Dan may need to verify the email address using a message sent by the service. To contact Dan on WhatsApp, fill the form and choose the WhatsApp button; then tap Send in WhatsApp.
     </p>
-    <p>&copy; 2026 Dan Derrick. All rights reserved.</p>
-  </footer>
 
-  <script>
-    const quoteForm = document.getElementById("quoteForm");
+    <button class="btn" type="submit">Send enquiry by email</button>
+    <button class="btn outline" type="button" id="whatsappButton">Send enquiry by WhatsApp</button>
+  </form>
 
-    quoteForm.addEventListener("submit", function (event) {
-      event.preventDefault();
+  <p><strong>Email:</strong>
+    <a href="mailto:derrickcoach078@gmail.com">derrickcoach078@gmail.com</a>
+  </p>
 
-      if (!quoteForm.reportValidity()) return;
+  <p><strong>WhatsApp:</strong>
+    <a href="https://wa.me/254798828956">+254 798 828 956</a>
+  </p>
 
-      const formData = new FormData(quoteForm);
+  <a class="btn" href="https://wa.me/254798828956?text=Hello%20Dan%2C%20I%27d%20like%20to%20enquire%20about%20your%20services.">
+    Message on WhatsApp
+  </a>
+</section>
 
-      const message = [
-        "Hello Dan, I would like to request a quote.",
-        "",
-        "Name: " + formData.get("name"),
-        "Email: " + formData.get("email"),
-        "Phone: " + (formData.get("phone") || "Not provided"),
-        "Service: " + formData.get("service"),
-        "Location: " + formData.get("location"),
-        "Requirements: " + formData.get("details")
-      ].join("\n");
+</main>
 
-      const whatsappURL =
-        "https://wa.me/254798828956?text=" +
-        encodeURIComponent(message);
+<footer>
+  © <span id="year"></span> Dan Derrick · Swimming &amp; Pool Services · Kenya
+</footer>
 
-      window.open(whatsappURL, "_blank", "noopener,noreferrer");
-    });
-  </script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const enquiryForm = document.getElementById('enquiryForm');
+const serviceSelect = document.getElementById('service');
+const packageField = document.getElementById('packageField');
+
+function updatePackageVisibility() {
+  packageField.style.display =
+    serviceSelect.value === 'Swimming lessons' ? 'block' : 'none';
+}
+
+serviceSelect.addEventListener('change', updatePackageVisibility);
+updatePackageVisibility();
+
+document.getElementById('whatsappButton').addEventListener('click', function() {
+  if (!enquiryForm.reportValidity()) return;
+
+  const data = new FormData(enquiryForm);
+  const lines = [
+    'Hello Dan, I would like to make an enquiry:',
+    ''
+  ];
+
+  for (const [key, value] of data.entries()) {
+    if (key.startsWith('_') || !String(value).trim()) continue;
+    lines.push(key + ': ' + value);
+  }
+
+  window.open(
+    'https://wa.me/254798828956?text=' + encodeURIComponent(lines.join('\n')),
+    '_blank',
+    'noopener'
+  );
+});
+</script>
+
 </body>
 </html>
